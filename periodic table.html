@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Periodic Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+	
+
+    h1 {
+      text-align: center;
+    }
+
+    .table {
+      display: grid;
+      grid-template-columns: repeat(18, 60px);
+      grid-gap: 4px;
+      justify-content: center;
+    }
+
+    .element {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 5px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .element h4 {
+      margin: 2px 0;
+      font-size: 14px;
+    }
+
+    .element p {
+      margin: 1px 0;
+      font-size: 10px;
+    }
+
+    .alkali { background-color: #f9c74f; }
+    .alkaline { background-color: #90be6d; }
+    .transition { background-color: #f8961e; }
+    .metalloid { background-color: #f9844a; }
+    .nonmetal { background-color: #ade8f4; }
+    .halogen { background-color: #f94144; }
+    .noble-gas { background-color: #577590; color: white; }
+    .post-transition { background-color: #b5ead7; }
+    .lanthanide { background-color: #c77dff; }
+    .actinide { background-color: #9d4edd; color: white; }
+
+    .empty {
+      visibility: hidden;
+	  
+    }
+	 footer {
+            background-color: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+	    .back-home:hover {
+         background-color: #FF8C00;
+            }
+        }
+  </style>
+</head>
+<body>
+
+  <h1>Periodic Table of Elements by: Seth Biala</h1>
+
+  <div class="table">
+    <!-- Period 1 -->
+    <div class="element nonmetal" style="grid-column: 1;"><h4>H</h4><p>1</p></div>
+    <div class="element noble-gas" style="grid-column: 18;"><h4>He</h4><p>2</p></div>
+
+    <!-- Period 2 -->
+    <div class="element alkali" style="grid-column: 1;"><h4>Li</h4><p>3</p></div>
+    <div class="element alkaline"><h4>Be</h4><p>4</p></div>
+    <div class="empty" style="grid-column: 3 / span 10;"></div>
+    <div class="element metalloid"><h4>B</h4><p>5</p></div>
+    <div class="element nonmetal"><h4>C</h4><p>6</p></div>
+    <div class="element nonmetal"><h4>N</h4><p>7</p></div>
+    <div class="element nonmetal"><h4>O</h4><p>8</p></div>
+    <div class="element halogen"><h4>F</h4><p>9</p></div>
+    <div class="element noble-gas"><h4>Ne</h4><p>10</p></div>
+
+    <!-- Period 3 -->
+    <div class="element alkali" style="grid-column: 1;"><h4>Na</h4><p>11</p></div>
+    <div class="element alkaline"><h4>Mg</h4><p>12</p></div>
+    <div class="empty" style="grid-column: 3 / span 10;"></div>
+    <div class="element post-transition"><h4>Al</h4><p>13</p></div>
+    <div class="element metalloid"><h4>Si</h4><p>14</p></div>
+    <div class="element nonmetal"><h4>P</h4><p>15</p></div>
+    <div class="element nonmetal"><h4>S</h4><p>16</p></div>
+    <div class="element halogen"><h4>Cl</h4><p>17</p></div>
+    <div class="element noble-gas"><h4>Ar</h4><p>18</p></div>
+
+    <!-- Period 4 -->
+    <div class="element alkali" style="grid-column: 1;"><h4>K</h4><p>19</p></div>
+    <div class="element alkaline"><h4>Ca</h4><p>20</p></div>
+    <div class="element transition"><h4>Sc</h4><p>21</p></div>
+    <div class="element transition"><h4>Ti</h4><p>22</p></div>
+    <div class="element transition"><h4>V</h4><p>23</p></div>
+    <div class="element transition"><h4>Cr</h4><p>24</p></div>
+    <div class="element transition"><h4>Mn</h4><p>25</p></div>
+    <div class="element transition"><h4>Fe</h4><p>26</p></div>
+    <div class="element transition"><h4>Co</h4><p>27</p></div>
+    <div class="element transition"><h4>Ni</h4><p>28</p></div>
+    <div class="element transition"><h4>Cu</h4><p>29</p></div>
+    <div class="element transition"><h4>Zn</h4><p>30</p></div>
+    <div class="element post-transition"><h4>Ga</h4><p>31</p></div>
+    <div class="element metalloid"><h4>Ge</h4><p>32</p></div>
+    <div class="element metalloid"><h4>As</h4><p>33</p></div>
+    <div class="element nonmetal"><h4>Se</h4><p>34</p></div>
+    <div class="element halogen"><h4>Br</h4><p>35</p></div>
+    <div class="element noble-gas"><h4>Kr</h4><p>36</p></div>
+
+    <!-- Period 5 -->
+    <div class="element alkali" style="grid-column: 1;"><h4>Rb</h4><p>37</p></div>
+    <div class="element alkaline"><h4>Sr</h4><p>38</p></div>
+    <div class="element transition"><h4>Y</h4><p>39</p></div>
+    <div class="element transition"><h4>Zr</h4><p>40</p></div>
+    <div class="element transition"><h4>Nb</h4><p>41</p></div>
+    <div class="element transition"><h4>Mo</h4><p>42</p></div>
+    <div class="element transition"><h4>Tc</h4><p>43</p></div>
+    <div class="element transition"><h4>Ru</h4><p>44</p></div>
+    <div class="element transition"><h4>Rh</h4><p>45</p></div>
+    <div class="element transition"><h4>Pd</h4><p>46</p></div>
+    <div class="element transition"><h4>Ag</h4><p>47</p></div>
+    <div class="element transition"><h4>Cd</h4><p>48</p></div>
+    <div class="element post-transition"><h4>In</h4><p>49</p></div>
+    <div class="element post-transition"><h4>Sn</h4><p>50</p></div>
+    <div class="element metalloid"><h4>Sb</h4><p>51</p></div>
+    <div class="element metalloid"><h4>Te</h4><p>52</p></div>
+    <div class="element halogen"><h4>I</h4><p>53</p></div>
+    <div class="element noble-gas"><h4>Xe</h4><p>54</p></div>
+
+    <!-- Period 6 -->
+    <div class="element alkali" style="grid-column: 1;"><h4>Cs</h4><p>55</p></div>
+    <div class="element alkaline"><h4>Ba</h4><p>56</p></div>
+    <div class="element lanthanide"><h4>La</h4><p>57</p></div>
+    <div class="element transition"><h4>Hf</h4><p>72</p></div>
+    <div class="element transition"><h4>Ta</h4><p>73</p></div>
+    <div class="element transition"><h4>W</h4><p>74</p></div>
+    <div class="element transition"><h4>Re</h4><p>75</p></div>
+    <div class="element transition"><h4>Os</h4><p>76</p></div>
+    <div class="element transition"><h4>Ir</h4><p>77</p></div>
+    <div class="element transition"><h4>Pt</h4><p>78</p></div>
+    <div class="element transition"><h4>Au</h4><p>79</p></div>
+    <div class="element transition"><h4>Hg</h4><p>80</p></div>
+    <div class="element post-transition"><h4>Tl</h4><p>81</p></div>
+    <div class="element post-transition"><h4>Pb</h4><p>82</p></div>
+    <div class="element post-transition"><h4>Bi</h4><p>83</p></div>
+    <div class="element metalloid"><h4>Po</h4><p>84</p></div>
+    <div class="element halogen"><h4>At</h4><p>85</p></div>
+    <div class="element noble-gas"><h4>Rn</h4><p>86</p></div>
+
+    <!-- Period 7 -->
+    <div class="element alkali" style="grid-column: 1;"><h4>Fr</h4><p>87</p></div>
+    <div class="element alkaline"><h4>Ra</h4><p>88</p></div>
+    <div class="element actinide"><h4>Ac</h4><p>89</p></div>
+    <div class="element transition"><h4>Rf</h4><p>104</p></div>
+    <div class="element transition"><h4>Db</h4><p>105</p></div>
+    <div class="element transition"><h4>Sg</h4><p>106</p></div>
+    <div class="element transition"><h4>Bh</h4><p>107</p></div>
+    <div class="element transition"><h4>Hs</h4><p>108</p></div>
+    <div class="element transition"><h4>Mt</h4><p>109</p></div>
+    <div class="element transition"><h4>Ds</h4><p>110</p></div>
+    <div class="element transition"><h4>Rg</h4><p>111</p></div>
+    <div class="element transition"><h4>Cn</h4><p>112</p></div>
+    <div class="element post-transition"><h4>Nh</h4><p>113</p></div>
+    <div class="element post-transition"><h4>Fl</h4><p>114</p></div>
+    <div class="element post-transition"><h4>Mc</h4><p>115</p></div>
+    <div class="element post-transition"><h4>Lv</h4><p>116</p></div>
+    <div class="element halogen"><h4>Ts</h4><p>117</p></div>
+    <div class="element noble-gas"><h4>Og</h4><p>118</p></div>
+  </div>
+
+  <br><br>
+
+  <h2 style="text-align:center;">Lanthanides & Actinides</h2>
+  <div class="table" style="grid-template-columns: repeat(15, 60px);">
+    <div class="element lanthanide"><h4>Ce</h4><p>58</p></div>
+    <div class="element lanthanide"><h4>Pr</h4><p>59</p></div>
+    <div class="element lanthanide"><h4>Nd</h4><p>60</p></div>
+    <div class="element lanthanide"><h4>Pm</h4><p>61</p></div>
+    <div class="element lanthanide"><h4>Sm</h4><p>62</p></div>
+    <div class="element lanthanide"><h4>Eu</h4><p>63</p></div>
+    <div class="element lanthanide"><h4>Gd</h4><p>64</p></div>
+    <div class="element lanthanide"><h4>Tb</h4><p>65</p></div>
+    <div class="element lanthanide"><h4>Dy</h4><p>66</p></div>
+    <div class="element lanthanide"><h4>Ho</h4><p>67</p></div>
+    <div class="element lanthanide"><h4>Er</h4><p>68</p></div>
+    <div class="element lanthanide"><h4>Tm</h4><p>69</p></div>
+    <div class="element lanthanide"><h4>Yb</h4><p>70</p></div>
+    <div class="element lanthanide"><h4>Lu</h4><p>71</p></div>
+
+    <div class="element actinide"><h4>Th</h4><p>90</p></div>
+    <div class="element actinide"><h4>Pa</h4><p>91</p></div>
+    <div class="element actinide"><h4>U</h4><p>92</p></div>
+    <div class="element actinide"><h4>Np</h4><p>93</p></div>
+    <div class="element actinide"><h4>Pu</h4><p>94</p></div>
+  </div>
+       <footer>
+        <p>© 2025 Seth Biala</p>
+		<br>
+		 <p>  <a href="index.html" class="back-home"><-Back to Home </a></p>
+    </footer>
+</body>
+</html>

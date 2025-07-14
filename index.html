@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <style>
+  body {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  body.fade-in {
+    opacity: 1;
+  }
+</style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <header>
+      <div class="header-container">
+        <h1>Welcome to Seth's Website</h1>
+      </div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="about me.html">About me</a>
+        <a href="ContactMe.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="about">
+        <h2>IT 0043</h2>
+        <p>For Compilation Purposes</p>
+      </section>
+
+      <section class="projects">
+        <h2>My Projects</h2>
+        <div class="project-row">
+          <div class="project-card">
+            <img src="gif1.gif" alt="Activity 1 GIF">
+            <div class="project-info">
+              <h3><a href="#">Activity 1</a></h3>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="gif1.gif" alt="Periodic Table GIF">
+            <div class="project-info">
+              <h3><a href="periodic table.html">Periodic Table of Elements</a></h3>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="heads.gif" alt="SDG Form GIF">
+            <div class="project-info">
+              <h3><a href="Activity3.html">SDGs Registration Form</a></h3>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="giphy.gif" alt="17 SDGs GIF">
+            <div class="project-info">
+              <h3><a href="Activity4.html">The 17 SDGs</a></h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Seth Biala</p>
+    </footer>
+  </div>
+
+  <script>
+    const projectItems = document.querySelectorAll('.project-card');
+
+    projectItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        item.style.backgroundColor = '#f0f4ff';
+      });
+
+      item.addEventListener('mouseleave', () => {
+        item.style.backgroundColor = '';
+      });
+    });
+	  window.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("fade-in");
+  });
+
+  // Fade-out when navigating away
+  document.querySelectorAll("a[href]").forEach(link => {
+    link.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
+      if (href && !href.startsWith("#") && !href.startsWith("javascript")) {
+        e.preventDefault();
+        document.body.classList.remove("fade-in");
+        document.body.style.opacity = 0;
+        setTimeout(() => {
+          window.location.href = href;
+        }, 300);
+      }
+    });
+  });
+  const projectCards = document.querySelectorAll('.project-card');
+
+  projectCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      const randomColor = getRandomColor();
+      card.style.backgroundColor = randomColor;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.backgroundColor = ''; // Reset to default
+    });
+  });
+
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+  </script>
+</body>
+
+</html>

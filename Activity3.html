@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAB 4 BIALA</title>
+  <link rel="stylesheet" href="style1.css">
+  <style>
+    .error {
+      border: 2px solid red;
+    }
+    #errorMsg {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-container">
+    <h1>Registration form SDGs</h1>
+    <form id="registrationForm" onsubmit="event.preventDefault(); validateForm();">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="Age">Age:</label>
+      <input type="number" id="Age" name="Age" min="0" required>
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="" disabled selected>Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+        <option value="prefer_not_to_say">Prefer not to say</option>
+      </select>
+
+      <br><br>
+      <label>SDG(s) of Interest:</label>
+      <br>
+      <div class="checkbox-group">
+        <ol>
+          <li><label><input type="checkbox" name="sdgs" value="no_poverty"> No Poverty</label></li>
+          <li><label><input type="checkbox" name="sdgs" value="quality_education"> Quality Education</label></li>
+          <li><label><input type="checkbox" name="sdgs" value="climate_action"> Climate Action</label></li>
+          <li><label><input type="checkbox" name="sdgs" value="gender_equality"> Gender Equality</label></li>
+          <li><label><input type="checkbox" name="sdgs" value="clean_water"> Clean Water & Sanitation</label></li>
+          <li><label><input type="checkbox" name="sdgs" value="life_below_water"> Life Below Water</label></li>
+          <li><label><input type="checkbox" name="sdgs" value="zero_hunger"> No Hunger</label></li>
+          <li><label><input type="checkbox" name="sdgs" value="decent_work"> Decent Work and Economic Growth</label></li>
+          <li><label><input type="checkbox" name="sdgs" value="good_health"> Good Health and Well-being</label></li>
+          <li><label><input type="checkbox" name="sdgs" value="clean_energy"> Affordable and Clean Energy</label></li>
+          <li><label><input type="checkbox" name="sdgs" value="life_on_land"> Life on Land</label></li>
+          <li><label><input type="checkbox" name="sdgs" value="peace_justice"> Peace, Justice, and Strong Institutions</label></li>
+          <li><label><input type="checkbox" name="sdgs" value="industry_innovation"> Industry, Innovation and Infrastructure</label></li>
+          <li><label><input type="checkbox" name="sdgs" value="partnerships"> Partnership for the Goals</label></li>
+          <li><label><input type="checkbox" name="sdgs" value="reduced_inequalities"> Reduced Inequalities</label></li>
+          <li><label><input type="checkbox" name="sdgs" value="sustainable_cities"> Sustainable Cities and Communities</label></li>
+          <li><label><input type="checkbox" name="sdgs" value="responsible_consumption"> Responsible Consumption and Production</label></li>
+        </ol>
+      </div>
+
+      <button type="submit">Submit</button>
+      <p id="errorMsg"></p>
+    </form>
+
+    <center>
+      <a href="index.html" class="back-home">&larr; Back to Home</a>
+    </center>
+  </div>
+
+  <script>
+    function validateForm() {
+      const form = document.getElementById("registrationForm");
+      const inputs = form.querySelectorAll("input[type='text'], input[type='email'], input[type='number']");
+      let allFilled = true;
+
+      document.getElementById("errorMsg").innerText = "";
+      inputs.forEach(input => input.classList.remove("error"));
+
+      for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i].value.trim() === "") {
+          inputs[i].classList.add("error");
+          allFilled = false;
+        }
+      }
+
+      const gender = document.getElementById("gender");
+      if (gender.value === "") {
+        gender.classList.add("error");
+        allFilled = false;
+      } else {
+        gender.classList.remove("error");
+      }
+
+      if (!allFilled) {
+        document.getElementById("errorMsg").innerText = "Please fill out all fields.";
+      } else {
+        alert("Form submitted successfully!");
+        form.reset();
+      }
+    }
+  </script>
+</body>
+
+</html>
